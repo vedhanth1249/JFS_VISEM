@@ -14,18 +14,19 @@ h1 {
     #border:5px solid red;
 }
 
-.square-image {
+.circle-image {
     width: 180px;
     height: 180px;
+    border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #f60606;
+    border: 5px solid #555;
     margin-right: 30px;
 }
 
 .info-box {
-    border: 2px solid rgb(10, 10, 10);
+    border: 2px solid black;
     padding: 15px;
     width: 400px;
     min-height: 150px;
     background: #f9f9f9;
-} 
+}
