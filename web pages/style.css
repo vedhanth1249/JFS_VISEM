@@ -40,4 +40,13 @@ button{
     font-size: 16px;
     cursor: pointer;
 }
+#messageBox {
+    margin-top: 15px;
+    padding: 10px;
+    background: #E8F5E9;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    display: none; 
+}
+
 

@@ -14,7 +14,6 @@ subjects.forEach(item => {
     });
 });
 
-
 document.getElementById("regform").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -38,11 +37,18 @@ document.getElementById("regform").addEventListener("submit", function(e) {
         alert("Please select at least one subject.");
         return;
     }
-
-    alert(
-        "Registration Successful!\n" +
-        "Name: " + name + "\n" +
-        "Selected Subjects:\n- " + selectedSubjects.join("\n- ") + "\n" +
-        "Total Fee: $" + totalFee
-    );
+   let messageBox = document.getElementById("messageBox");
+    if (!messageBox) {
+    messageBox = document.createElement("div");
+    messageBox.id = "messageBox";   
+    document.getElementById("regform").appendChild(messageBox);
+    }
+    messageBox = document.getElementById("messageBox");
+    messageBox.style.display = "block"; 
+    messageBox.innerHTML = `
+    <strong>Registration Successful!</strong><br>
+    Name: ${name}<br>
+    Selected Subjects:<br>- ${selectedSubjects.join("<br>- ")}<br>
+    Total Fee: $${totalFee}
+`;
 });
